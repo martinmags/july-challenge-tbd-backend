@@ -1,6 +1,6 @@
 import { Schema } from "mongoose";
 import { model } from "mongoose";
-import { IUserDocument } from "./types/user_interface";
+import { IUserDocument } from "../types/user_interface";
 
 const UserSchema = new Schema({
   first_name: String,
