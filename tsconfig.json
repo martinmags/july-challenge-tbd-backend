@@ -2,18 +2,14 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
+    "moduleResolution": "node",
     "outDir": "dist/js",
     "rootDir": "src",
     "strict": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["src/@types", "node_modules/@types"]
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "src/types/*.ts",
-    "node_modules",
-    ".vscode"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", ".vscode"]
 }
