@@ -9,5 +9,5 @@ const UserSchema = new Schema({
   title: String,
   skill: String,
 });
-export default UserSchema;
 export const UserModel = model<IUserDocument>("user", UserSchema);
+export default UserSchema;

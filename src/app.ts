@@ -1,7 +1,9 @@
 import express, { Express } from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import connect from "./scripts/dummy_data";
+import connect from "./scripts/dummy_data"
+
+import userRouter from './routes/userRouter'
 
 require("dotenv").config();
 
@@ -9,6 +11,9 @@ const app: Express = express();
 const PORT: string | number = process.env.PORT || 4000;
 
 app.use(cors());
+app.use(express.json())
+app.use('/user', userRouter)
+
 const uri: string = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cloroxory.dei81.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`;
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
 
