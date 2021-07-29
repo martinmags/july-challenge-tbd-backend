@@ -2,7 +2,7 @@
   "name": "july-challenge-tbd-backend",
   "version": "1.0.0",
   "description": "Backend code for tbd",
-  "main": "index.js",
+  "main": "app.ts",
   "scripts": {
     "build": "tsc",
     "start": "concurrently \"tsc -w\" \"nodemon dist/js/app.js\""
