@@ -8,6 +8,7 @@ const UserSchema = new Schema({
 	dept: String,
 	title: String,
 	skills: [String],
+	googleId: String,
 });
 export const UserModel = model<IUserDocument>('user', UserSchema);
 export default UserSchema;

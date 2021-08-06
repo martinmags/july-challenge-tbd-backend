@@ -8,6 +8,7 @@ const connect = async () => {
 			dept: 'Engineering',
 			title: 'QA Engineer',
 			skill: 'Cypress',
+			googleId: '123',
 		},
 	];
 
@@ -16,8 +17,7 @@ const connect = async () => {
 		for (const user of usersTemp) {
 			// Check if users are in database already; hard coded
 			const existingUser = await UserModel.findOne({
-				first_name: 'Alexa',
-				last_name: 'Lewis',
+				googleId: '123',
 			});
 
 			// Only create users that do not exist already
